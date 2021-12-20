@@ -17,9 +17,16 @@ export default function Assento(props) {
         }
         else if(status === 'disponivel') {
             setStatus('selecionado')
+            props.selecionados([...props.lista, props.assento.id])
         }
         else if(status === 'selecionado') {
             setStatus('disponivel')
+            for(let i = 0; i<props.lista.length;i++) {
+                if(props.lista[i] === props.assento.id) {
+                    props.lista.splice(i, 1)
+                }
+            }
+            props.selecionados(props.lista)
         }
     }
     
