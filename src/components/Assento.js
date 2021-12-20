@@ -1,5 +1,29 @@
-export default function Assento() {
+import { useEffect, useState } from "react"
+
+
+export default function Assento(props) {
+    const [status, setStatus] = useState('')
+    useEffect(() => {
+        if (props.assento.isAvailable === true) {
+            setStatus('disponivel')
+        }
+        else if (props.assento.isAvailable === false) {
+            setStatus('indisponivel')
+        }
+    },[])
+    function selecionar() {
+        if (status === 'indisponivel') {
+            return alert("Esse assento não está disponível")
+        }
+        else if(status === 'disponivel') {
+            setStatus('selecionado')
+        }
+        else if(status === 'selecionado') {
+            setStatus('disponivel')
+        }
+    }
+    
     return(
-        <div class="assento disponivel">01</div>
+        <div class={`assento ${status}`} onClick={selecionar}>{props.assento.name}</div>
     )
 }

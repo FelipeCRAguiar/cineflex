@@ -1,5 +1,9 @@
-export default function Sessoes() {
+import { Link } from 'react-router-dom'
+
+export default function Sessoes(props) {
     return(
-        <div class="sessao">19:00</div>
+        <Link to={`/assentos/${props.sessao.id}`}>
+            <div class="sessao">{props.sessao.name}</div>
+        </Link>
     )
 }

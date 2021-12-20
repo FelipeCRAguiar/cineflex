@@ -96,6 +96,13 @@ footer {
     border-radius: 2px;
     margin-left: 10px;
     margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thumbnail img {
+    width: 48px;
+    height: 72px;
 }
 .info p {
     font-family: Roboto;

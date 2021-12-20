@@ -1,13 +1,18 @@
 import Sessoes from "./Sessoes"
 
-export default function Dias() {
+export default function Dias(props) {
+    let dia = props.dia.weekday + " - " + props.dia.date
+    let condition = false
+    if (props.dia.showtimes !== undefined) {
+        condition = true
+    }
     return(
         <div class="dias">
             <div class="dia">
-                Quinta-feira - 24/06/2021
+                {dia}
             </div>
             <div class="sessoes">
-                <Sessoes />
+                {condition ? props.dia.showtimes.map(sessao => <Sessoes sessao={sessao} key={sessao.id} />): 'Carregando...'}
             </div>
         </div>
     )

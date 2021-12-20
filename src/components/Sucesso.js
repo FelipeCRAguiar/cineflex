@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Sucesso() {
     return(
         <div class="sucesso">
@@ -19,7 +21,9 @@ export default function Sucesso() {
                 <p>Nome: João da Silva Sauro</p>
                 <p>CPF: 123.456.789-10</p>
             </div>
-            <button>Voltar pra Home</button>
+            <Link to='/'>
+                <button>Voltar pra Home</button>
+            </Link>
         </div>
     )
 }

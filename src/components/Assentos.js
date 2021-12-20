@@ -1,13 +1,31 @@
 import Assento from "./Assento"
+import { Link, useParams } from "react-router-dom"
+import axios from 'axios'
+import { useEffect, useState } from "react"
 
 export default function Assentos() {
+    const [assentos, setAssentos] = useState({})
+    const { idSessao } = useParams()
+    useEffect(() => {
+        const resposta = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${idSessao}/seats`)
+        resposta.then(resposta => {
+            setAssentos(resposta.data)
+        })
+    },[])
+    let condition = false
+    if (assentos.seats !== undefined) {
+        condition = true
+    }
+    let dia = ''
+    condition ? dia = assentos.day.weekday + ' - ' + assentos.day.date: dia = ''
+    
     return(
         <div class="selecaoAssento">
             <div class="selecione">
                 Selecione o(s) assento(s)
             </div>
             <div class="assentos">
-                <Assento />
+                {condition ? assentos.seats.map(assento => <Assento assento={assento} key={assento.id} />): "Carregando..."}
             </div>
             <div class="indice">
                 <div class="status">
@@ -31,15 +49,19 @@ export default function Assentos() {
                 <p>CPF do comprador:</p>
                 <input placeholder="Digite seu CPF..." />
             </div>
-            <button>Reservar assento(s)</button>
+            <Link to='/sucesso'>
+                <button>Reservar assento(s)</button>
+            </Link>
             <footer>
-                <div class="thumbnail"></div>
+                <div class="thumbnail">
+                    {condition ? <img src={assentos.movie.posterURL} />: 'Carregando...'}
+                </div>
                 <div class="info">
                     <p>
-                        Enola Holmes
+                        {condition ? assentos.movie.title: 'Carregando'}
                     </p>
                     <p>
-                        Quinta-feira - 15:00
+                        {dia}
                     </p>
                 </div>
             </footer>
