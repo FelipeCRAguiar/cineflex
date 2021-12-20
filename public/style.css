@@ -66,7 +66,7 @@ nav {
 .secao {
     width: 83px;
     height: 43px;
-    background: #E8833A;
+    background-color: #E8833A;
     border-radius: 3px;
     font-family: Roboto;
     font-size: 18px;
@@ -84,14 +84,14 @@ footer {
     display: flex;
     width: 375px;
     height: 117px;
-    background: #DFE6ED;
+    background-color: #DFE6ED;
     border: 1px solid #9EADBA;
     align-items: center;
 }
 .thumbnail {
     width: 64px;
     height: 89px;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     margin-left: 10px;
@@ -105,4 +105,100 @@ footer {
 }
 .escondido {
     display: none;
+}
+.assentos {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.assento {
+    width: 26px;
+    height: 26px;
+    border-radius: 17px;
+    margin-right: 7px;
+    margin-bottom: 18px;
+    font-family: Roboto;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+}
+.indice {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 41px;
+}
+.status {
+    font-family: Roboto;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.013em;
+    color: #4E5A65;
+}
+.selecionado {
+    background-color: #8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+.disponivel {
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+}
+.indisponivel {
+    background-color: #FBE192;
+    border: 1px solid #F7C52B;
+}
+.informacao {
+    margin-left: 24px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: #293845;
+}
+.informacao input {
+    width: 327px;
+    height: 51px;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: #293845;
+    margin-bottom: 7px;
+}
+.informacao input::placeholder {
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 21px;
+    color: #AFAFAF;
+}
+button {
+    width: 225px;
+    height: 42px;
+    left: 72px;
+    top: 688px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    background-color: #E8833A;
+    border-radius: 3px;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 72px;
+    margin-top: 50px;
 }
