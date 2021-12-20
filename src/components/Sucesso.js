@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Sucesso() {
+    const reserva = useLocation()
+    console.log(reserva.state)
     return(
         <div class="sucesso">
             <div class="selecione verde">
@@ -8,18 +10,17 @@ export default function Sucesso() {
             </div>
             <div class="infoFinal">
                 <p class="assunto">Filme e sessão</p>
-                <p>Enola Holmes</p>
-                <p>24/06/2021 15:00</p>
+                <p>{reserva.state.filme}</p>
+                <p>{reserva.state.dia}</p>
             </div>
             <div class="infoFinal">
                 <p class="assunto">Ingressos</p>
-                <p>Assento 15</p>
-                <p>Assento 16</p>
+                {reserva.state.assentos.map(numero => <p>Assento {numero}</p>)}
             </div>
             <div class="infoFinal">
                 <p class="assunto">Comprador</p>
-                <p>Nome: João da Silva Sauro</p>
-                <p>CPF: 123.456.789-10</p>
+                <p>Nome: {reserva.state.name}</p>
+                <p>CPF: {reserva.state.cpf}</p>
             </div>
             <Link to='/'>
                 <button>Voltar pra Home</button>

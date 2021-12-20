@@ -18,6 +18,7 @@ export default function Assento(props) {
         else if(status === 'disponivel') {
             setStatus('selecionado')
             props.selecionados([...props.lista, props.assento.id])
+            props.salvar([...props.assentos, props.assento.name])
         }
         else if(status === 'selecionado') {
             setStatus('disponivel')
@@ -27,6 +28,12 @@ export default function Assento(props) {
                 }
             }
             props.selecionados(props.lista)
+            for(let i = 0; i<props.assentos.length;i++) {
+                if(props.assentos[i] === props.assento.name) {
+                    props.lista.splice(i, 1)
+                }
+            }
+            props.salvar(props.assentos)
         }
     }
     
