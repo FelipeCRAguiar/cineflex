@@ -30,7 +30,6 @@ export default function Assentos() {
     function postar() {
         const post = axios.post('https://mock-api.driven.com.br/api/v4/cineflex/seats/book-many', reserva)
         post.catch(() => {return(alert('Não foi possivel completar seu pedido'))})
-        post.then(() => console.log('Postado'))
     }
     
     return(
