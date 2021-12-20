@@ -103,9 +103,6 @@ footer {
     line-height: 30px;
     color: #293845;
 }
-.escondido {
-    display: none;
-}
 .assentos {
     width: 100%;
     padding-left: 12px;
@@ -201,4 +198,31 @@ button {
     border: none;
     margin-left: 72px;
     margin-top: 50px;
+}
+.escondido {
+    display: none;
+}
+.verde {
+    color: #247A6B;
+}
+.infoFinal p {
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #293845;
+}
+.assunto {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #293845;
+    margin-bottom: 10px;
+}
+.infoFinal {
+    margin-left: 28px;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
