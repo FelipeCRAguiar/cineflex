@@ -3,10 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cineflex</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="root"></div>
+    <div class="root">
+      <nav>
+        CINEFLEX
+      </nav>
+      <div class="selecaoFilme escondido">
+        <div class="selecione">
+          Selecione o filme
+        </div>
+        <div class="filmes">
+          <div class="filme"></div>
+          <div class="filme"></div>
+          <div class="filme"></div>
+          <div class="filme"></div>
+        </div>
+      </div>
+      <div class="selecaoSessao escondido">
+        <div class="selecione">
+          Selecione o horário
+        </div>
+        <div class="dias">
+          <div class="dia">
+            Quinta-feira - 24/06/2021
+          </div>
+          <div class="secoes">
+            <div class="secao">15:00</div>
+            <div class="secao">19:00</div>
+          </div>
+        </div>
+        <div class="dias">
+          <div class="dia">
+            Sexta-feira - 25/06/2021
+          </div>
+          <div class="secoes">
+            <div class="secao">15:00</div>
+            <div class="secao">19:00</div>
+          </div>
+        </div>
+        <footer>
+          <div class="thumbnail"></div>
+          <div class="info">
+            <p>
+              Enola Holmes
+            </p>
+          </div>
+        </footer>
+      </div>
+      <div class="selecaoAssento"></div>
+      <div class="sucesso"></div>
+    </div>
   </body>
 </html>

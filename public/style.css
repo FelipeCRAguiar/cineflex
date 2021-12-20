@@ -1,0 +1,108 @@
+body {
+    width: 375px;
+}
+nav {
+    width: 100%;
+    height: 67px;
+    background-color: #C3CFD9;
+    font-family: Roboto;
+    font-size: 34px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E8833A;
+}
+.selecione {
+    width: 100%;
+    height: 110px;
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    color: #293845;
+}
+.filmes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.filme {
+    width: 145px;
+    height: 209px;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11px;
+}
+.filme img {
+    width: 129px;
+    height: 193px;
+}
+.dias {
+    width: 100%;
+    margin-left: 24px;
+    margin-bottom: 23px;
+}
+.dia {
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    letter-spacing: 0.02em;
+    color: #293845;
+    margin-bottom: 22px;
+}
+.secoes {
+    display: flex;
+    flex-wrap: wrap;
+}
+.secao {
+    width: 83px;
+    height: 43px;
+    background: #E8833A;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    width: 375px;
+    height: 117px;
+    background: #DFE6ED;
+    border: 1px solid #9EADBA;
+    align-items: center;
+}
+.thumbnail {
+    width: 64px;
+    height: 89px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 14px;
+}
+.info p {
+    font-family: Roboto;
+    font-size: 26px;
+    line-height: 30px;
+    color: #293845;
+}
+.escondido {
+    display: none;
+}
